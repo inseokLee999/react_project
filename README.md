@@ -14,11 +14,12 @@
 
 ## 의존성
 
-<<<<<<< HEAD
-=======
+# <<<<<<< HEAD
+
 > 필요 라이브러리
 
->>>>>>> 971fbd56d2a7d5a627b0b2d7bb5b913beb54ec38
+> > > > > > > 971fbd56d2a7d5a627b0b2d7bb5b913beb54ec38
+
 - react-router-dom : 라우터
 - sass, styled-components, classnaes : 스타일링 목적
 - immer : 불변성 관리
@@ -110,9 +111,8 @@ const resources = {
 };
 i18n.use(initReactI18next).init({
   resources,
-  lng:'ko'
+  lng: 'ko',
 });
-
 ```
 
 - 설정 반영 : src/index.js
@@ -124,5 +124,48 @@ import './i18n';
 ```
 
 -적용하기 : useTranslation 훅 / react-i18next
-  - t : 메세지 조회 함수
-  - i18n : 편의 기능 객체, changeLanguage(..) : 언어 변경
+
+- t : 메세지 조회 함수
+- i18n : 편의 기능 객체, changeLanguage(..) : 언어 변경
+
+```javascript
+import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+
+const App = () => {
+  const { t, i18n } = useTranslation();
+
+  return (
+    <>
+      <Helmet>
+        <title>사이트 제목 변경 테스트!</title>
+      </Helmet>
+      <div>{t('아이디')}</div>
+      <div>{t('약관에_동의')}</div>
+      <div>{t('없는_문구')}</div>
+      <button type="button" onClick={() => i18n.changeLanguage('ko')}>
+        한국어
+      </button>
+      <button type="button" onClick={() => i18n.changeLanguage('en')}>
+        English
+      </button>
+    </>
+  );
+};
+
+export default App;
+```
+
+# 레이아웃 구성
+
+- src/layouts/MainLayout.js
+- src/outlines/Header.js
+- src/outlines/Footer.js
+
+
+# 라우팅 구성
+
+## 회원
+
+- /member/join : 회원 가입
+- /member/login : 로그인
