@@ -14,11 +14,8 @@
 
 ## 의존성
 
-<<<<<<< HEAD
-=======
 > 필요 라이브러리
 
->>>>>>> 971fbd56d2a7d5a627b0b2d7bb5b913beb54ec38
 - react-router-dom : 라우터
 - sass, styled-components, classnaes : 스타일링 목적
 - immer : 불변성 관리
