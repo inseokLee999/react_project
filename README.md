@@ -1,6 +1,6 @@
 #설정
 
-- .prettierrc 설정
+## .prettierrc 설정
 
 ```json
 {
@@ -12,7 +12,7 @@
 }
 ```
 
-- 의존성 : 필요 라이브러리
+## 의존성 : 필요 라이브러리
 
   - react-router-dom : 라우터
   - sass, styled-components, classnaes : 스타일링 목적
@@ -27,3 +27,6 @@
 yarn add react-router-dom sass styled-components classnames immer react-icons @loadable/component
 yarn add react-helmet-async
 ```
+
+## react-helmet-async 설정
+  -src/index.js
