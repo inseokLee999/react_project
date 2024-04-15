@@ -17,7 +17,7 @@
 > 필요 라이브러리
 
 - react-router-dom : 라우터
-- sass, styled-components, classnaes : 스타일링 목적
+- sass, styled-components, classnames : 스타일링 목적
 - immer : 불변성 관리
 - react-icons : 리액트에서 제공하는 아이콘 라이브러리
 - @loadable/component : 지연로딩
@@ -77,7 +77,7 @@ yarn add i18next react-i18next
 -언어파일 생성
 
 - src/langs/ko, src/langs/en 폴더생성
-- 각 폴더 벼롤 공통 문구 - commons.js, 검증 문구 - validation.js, 에러 문구 - error.js
+- 각 폴더 별로 공통 문구 - commons.js, 검증 문구 - validation.js, 에러 문구 - error.js
 - 언어파일 통합 : 예) src/langs/ko/index.js
 
 ```javascript
@@ -107,7 +107,7 @@ const resources = {
 };
 i18n.use(initReactI18next).init({
   resources,
-  lng: 'ko',
+  lng: 'ko',//lng: navigator.language : 네비게이터의 언어
 });
 ```
 
