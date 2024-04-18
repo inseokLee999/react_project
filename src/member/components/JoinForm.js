@@ -36,7 +36,6 @@ const FormBox = styled.form`
 
 const JoinForm = ({ form, onSubmit, onChange, onToggle, onReset, errors }) => {
   const { t } = useTranslation();
-  console.log(errors);
   return (
     <FormBox autoComplete="off" onSubmit={onSubmit}>
       <MessageBox>축구 GOAT는 메시지!</MessageBox>

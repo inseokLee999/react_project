@@ -81,7 +81,7 @@ const JoinContainer = () => {
 
   const onChange = useCallback((e) => {
     const name = e.target.name;
-    const value = e.target.value.trim();
+    const value = e.target.value;
     setForm((form) => ({ ...form, [name]: value }));
   }, []);
 

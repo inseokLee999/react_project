@@ -6,6 +6,6 @@ const InputBox = styled.input`
   padding: 0 10px;
   margin: 0px;
   border-radius: 3px;
-  width: 80%;
+  width: 100%;
 `;
 export default React.memo(InputBox);
